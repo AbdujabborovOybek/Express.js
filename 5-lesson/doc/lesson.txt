@@ -1,0 +1,108 @@
+Dars Rejasi: Validatsiya va Ma'lumotlarni Tekshirish
+
+Maqsad:
+- Talabalar AJV kutubxonasi yordamida so‘rovlarni validatsiya qilishni o‘rganishlari.
+- So‘rovlarda email, parol, raqam va matn uzunligini tekshirishni tushunish.
+- Xatolik xabarlarini sozlash va foydalanuvchiga tushunarli javob qaytarishni o‘rganish.
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)
+- Darsning maqsadi va rejasini tushuntirish.
+- Validatsiya nima? Nega muhim? 
+- Yomon ma'lumotlarning serverga ta'siri (xavfsizlik, ma'lumotlar to‘g‘riligi).
+
+
+2. AJV Kutubxonasi Asoslari (15 daqiqa)
+- AJV nima?  
+  - JSON Schema asosida validatsiya qiluvchi tezkor va keng qo‘llaniladigan kutubxona.  
+  - AJV ni o‘rnatish: npm install ajv
+  
+  
+- JSON Schema nima?  
+  - Ma'lumot strukturasini tasvirlash uchun standart.  
+  - Misol: Email, parol, raqam formatini tekshirish.  
+- Oddiy validatsiya misoli:  
+  - Foydalanuvchi registratsiyasi uchun JSON Schema yaratish.  
+  const schema = {
+    type: "object",
+    properties: {
+      email: { type: "string", format: "email" },
+      password: { type: "string", minLength: 6 },
+      age: { type: "number", minimum: 18 }
+    },
+    required: ["email", "password"]
+  };
+  
+
+
+3. So‘rovlarda Ma'lumotlarni Tekshirish (15 daqiqa)
+- Asosiy validatsiya qoidalari:  
+  - Email: format: "email" yordamida tekshirish.  
+  - Parol: minLength va maxLength bilan uzunlikni tekshirish.  
+  - Raqam: type: "number" va minimum, maximum bilan chegaralarni belgilash.  
+  - Matn uzunligi: minLength va maxLength bilan nazorat qilish.  
+- Amaliy Misol:  
+  - Foydalanuvchi registratsiya endpointi (POST /register) uchun validatsiya qo‘llash.  
+  - So‘rov tarkibidagi ma'lumotlarni AJV yordamida tekshirish.  
+
+
+4. Xatolik Xabarlarini Sozlash va Foydalanuvchiga Qaytarish (15 daqiqa)
+- Xatoliklarni qayta ishlash:  
+  - AJV xatoliklarini o‘qib, foydalanuvchi uchun tushunarli xabarga aylantirish.  
+  - Xatolik xabarlarini formatlash (masalan: email not valid, password too short).  
+- Javobni strukturasi:  
+  {
+    "success": false,
+    "message": "Validation error",
+    "errors": [
+      { "field": "email", "message": "Invalid email format" }
+    ]
+  }
+  
+- Amaliy Misol:  
+  - Xatoliklarni middleware yordamida markazlashtirib boshqarish.  
+  - Foydalanuvchiga JSON formatida tushunarli xatolik xabari qaytarish.  
+
+
+5. Yakuniy Qism (5-10 daqiqa)
+- Qisqacha Takrorlash:  
+  - AJV va JSON Schema.  
+  - Ma'lumotlarni tekshirish qoidalari.  
+  - Xatolik xabarlarini sozlash.  
+- Savol-Javob:  
+  - Talabalarning savollariga javob berish.  
+- Vazifa:  
+  - Talabalarga validatsiya qilingan POST /login endpointi yaratish vazifasi berish:  
+    - Email va parolni tekshirish.  
+    - Parol uzunligi kamida 8 belgidan iborat bo‘lishi.  
+
+
+Qo'shimcha Maslahatlar:
+- Darsda ishlatiladigan kod namunalari:  
+  javascript
+  const Ajv = require("ajv");
+  const ajv = new Ajv();
+
+  // Validatsiya funksiyasi
+  const validate = ajv.compile(schema);
+
+  // Middleware orqali validatsiya
+  app.post("/register", (req, res) => {
+    const isValid = validate(req.body);
+    if (!isValid) {
+      const errors = validate.errors.map(err => ({
+        field: err.instancePath.slice(1), // /email -> email
+        message: err.message
+      }));
+      return res.status(400).json({ success: false, errors });
+    }
+    // Ma'lumotlar to‘g‘ri, keyingi amalga o‘tkazish
+  });
+  
+- Tajriba uchun maslahatlar:  
+  - Validatsiya qoidalarini alohida fayllarda saqlang (masalan: schemas/userSchema.js).  
+  - Xatoliklarni markaziy middleware orqali boshqaring.  
+
+

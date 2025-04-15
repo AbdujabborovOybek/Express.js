@@ -1,0 +1,113 @@
+Dars Rejasi: Ma'lumotlar Bazasi bilan Integratsiya (MongoDB va MySQL)
+
+Maqsad:
+- Talabalar SQL va NoSQL ma'lumotlar bazalari farqlarini tushunishlari.  
+- MongoDB (NoSQL) va MySQL (SQL) bilan ishlashni o‘rganish.  
+- MySQL2 kutubxonasi yordamida MySQL bilan ishlashni tushunish.  
+
+
+Darsning Bosqichlari:
+1. Kirish (5 daqiqa)  
+- Ma'lumotlar bazasi nima? Ma'lumotlarni saqlash va boshqarish tizimi.  
+- SQL vs NoSQL:  
+  - SQL: Jadval asosida (MySQL, PostgreSQL).  
+  - NoSQL: Hujjat asosida (MongoDB).  
+- Dars rejasi: MongoDB haqida nazariya, MySQL bilan amaliyot.  
+
+
+2. SQL va NoSQL Haqida Ma'lumot (10 daqiqa)  
+- SQL (Structured Query Language):  
+  - Jadval (table) va qator (row) asosida.  
+  - Misol: MySQL, PostgreSQL.  
+  - Afzalliklari:  
+    - Ma'lumotlar strukturasi aniq.  
+    - Murakkab so‘rovlar uchun qulay.  
+  - Kamchiliklari:  
+    - Masshtablash qiyin.  
+    - Struktura o‘zgartirish qiyin.  
+
+- NoSQL (Not Only SQL):  
+  - Hujjat (document), kalit-qiymat (key-value) asosida.  
+  - Misol: MongoDB, Redis.  
+  - Afzalliklari:  
+    - Masshtablash oson.  
+    - Ma'lumotlar strukturasi moslashuvchan.  
+  - Kamchiliklari:  
+    - Murakkab so‘rovlar uchun noqulay.  
+
+
+3. MongoDB Haqida Ma'lumot (10 daqiqa)  
+- MongoDB nima? NoSQL ma'lumotlar bazasi.  
+- Asosiy tushunchalar:  
+  -Collection: Jadvalga o‘xshash (lekin strukturasi moslashuvchan).  
+  -Document: JSON formatidagi ma'lumot (row ga o‘xshash).  
+  -Field: Kalit-qiymat juftligi (column ga o‘xshash).  
+- MongoDB dan foydalanish:  
+  - MongoDB Atlas (bulutli xizmat).  
+  - MongoDB Compass (grafik interfeys).  
+- Misol:  
+  {
+    "_id": "123",
+    "name": "Ali",
+    "age": 25,
+    "address": { "city": "Toshkent", "zip": "100000" }
+  }
+  
+
+
+4. MySQL bilan Ishlash (20 daqiqa)  
+- MySQL2 kutubxonasi:  
+  npm install mysql2
+  
+- MySQL ulanish:  
+  const mysql = require("mysql2");
+  const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "mydb",
+  });
+  
+- CRUD amallari:  
+  -Create (INSERT):  
+    connection.query(
+      "INSERT INTO users (name, age) VALUES (?, ?)",
+      ["Ali", 25],
+      (err, results) => {
+        if (err) throw err;
+        console.log("Yangi foydalanuvchi qo‘shildi!");
+      }
+    );
+    
+  - Read (SELECT):  
+    connection.query("SELECT * FROM users", (err, results) => {
+      if (err) throw err;
+      console.log(results);
+    });
+    
+  - Update (UPDATE):  
+    connection.query(
+      "UPDATE users SET age = ? WHERE id = ?",
+      [26, 1],
+      (err, results) => {
+        if (err) throw err;
+        console.log("Ma'lumot yangilandi!");
+      }
+    );
+    
+  - Delete (DELETE):  
+    connection.query("DELETE FROM users WHERE id = ?", [1], (err, results) => {
+      if (err) throw err;
+      console.log("Foydalanuvchi o‘chirildi!");
+    });
+    
+
+
+5. Yakuniy Qism (5-10 daqiqa)  
+- Takrorlash:  
+  - SQL vs NoSQL.  
+  - MongoDB va MySQL bilan ishlash.  
+- Savol-javob: Talabalar savollari.  
+- Vazifa:  
+  - MySQL2 yordamida yangi loyiha yaratish (CRUD amallari).  
+  - MongoDB Atlas hisob yaratish va bir nechta hujjat qo‘shish.  

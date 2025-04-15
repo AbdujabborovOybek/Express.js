@@ -1,0 +1,97 @@
+Dars Rejasi: RESTful API yaratish va JSON bilan ishlash
+
+Maqsad:
+- Talabalar RESTful API nima ekanligini va uning prinsiplarini tushunishlari.
+- CRUD amallarini (GET, POST, PUT, DELETE) bajarishni o‘rganish.
+- JSON formatida ma'lumot almashishni tushunish.
+- To‘g‘ri folder strukturasi yaratishni o‘rganish.
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)
+- Darsning maqsadi va rejasini tushuntirish.
+- RESTful API nima ekanligini tushuntirish.
+- REST prinsiplari haqida qisqacha ma'lumot.
+
+
+2. REST Prinsiplari va Express.js da RESTful API Yaratish (15 daqiqa)
+- REST nima?
+  - REST (Representational State Transfer) — bu veb-xizmatlar uchun arxitektura uslubi.
+  - RESTful API — bu REST prinsiplariga asoslangan API.
+
+- REST Prinsiplari:
+  - Client-Server: Klient va server bir-biridan mustaqil.
+  - Stateless: Har bir so‘rov mustaqil va serverda saqlanmaydi.
+  - Cacheable: So‘rovlar cache qilinishi mumkin.
+  - Uniform Interface: Bir xil interfeys va resurslarga murojaat.
+  - Layered System: Tizim qatlamli bo‘lishi mumkin.
+
+- Express.js da RESTful API Yaratish: (API: Application Programming Interface)
+  - Oddiy RESTful API yaratishni boshlash.
+  - Misol: /api/users endpointi yaratish.
+
+
+3. CRUD Amallarini Bajarish (15 daqiqa)
+- CRUD nima?
+  - Create (Yaratish), Read (O‘qish), Update (Yangilash), Delete (O‘chirish).
+
+- HTTP Metodlari va CRUD:
+  - GET: Ma'lumotlarni o‘qish.
+  - POST: Yangi ma'lumot yaratish.
+  - PUT: Mavjud ma'lumotni yangilash.
+  - DELETE: Ma'lumotni o‘chirish.
+
+- Amaliy Misol:
+  - Foydalanuvchilar ro‘yxati uchun CRUD amallarini bajarish:
+    - GET /api/users — barcha foydalanuvchilarni olish.
+    - POST /api/users — yangi foydalanuvchi qo‘shish.
+    - PUT /api/users/:id — foydalanuvchi ma'lumotlarini yangilash.
+    - DELETE /api/users/:id — foydalanuvchini o‘chirish.
+
+
+4. JSON Formatida Ma'lumot Almashish (10 daqiqa)
+- JSON nima?
+  - JSON (JavaScript Object Notation) — ma'lumotlarni ifodalash formati.
+  - JSON formatida ma'lumot almashish RESTful API da asosiy usul.
+
+- JSON bilan Ishlash:
+  - Ma'lumotlarni JSON formatida yuborish va qabul qilish.
+  - Misol: POST so‘rovi orqali JSON ma'lumot yuborish va uni qayta ishlash.
+
+- Amaliy Misol:
+  - JSON formatida foydalanuvchi ma'lumotlarini yuborish va qabul qilish.
+
+
+5. Folder Strukturasi (10 daqiqa)
+- Nima uchun Folder Strukturasi muhim?
+  - Kodni tartibli va tushunarli qilish.
+  - Loyihani kengaytirishni osonlashtirish.
+
+- To‘g‘ri Folder Strukturasi:
+  - src/ — asosiy kodlar.
+    - routes/ — marshrutlar.
+    - middlewares/ — middleware lar.
+    - controllers/ — biznes logikasi.
+    - services/ — xizmatlar.
+    - utils/ — yordamchi funksiyalar.
+  - config/ — konfiguratsiya fayllari.
+  - server.js — serverni ishga tushirish fayli.
+
+- Amaliy Misol:
+  - RESTful API uchun folder strukturasi yaratish.
+
+
+6. Yakuniy Qism (5-10 daqiqa)
+- Qisqacha Takrorlash:
+  - REST prinsiplari.
+  - CRUD amallari.
+  - JSON bilan ishlash.
+  - Folder strukturasi.
+
+- Savol-Javob:
+  - Talabalarning savollariga javob berish.
+
+- Vazifa:
+  - Talabalarga RESTful API yaratish vazifasi berish:
+  - Foydalanuvchilar ro‘yxati uchun CRUD amallarini bajarish.
+  - To‘g‘ri folder strukturasi yaratish.

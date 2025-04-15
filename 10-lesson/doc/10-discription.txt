@@ -1,0 +1,46 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Xatoliklarni Boshqarish va Validatsiyani o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: Xatoliklar va Validatsiya
+
+
+🎯 Maqsadlarimiz:  
+- Xatoliklarni ushlab qolish va foydalanuvchiga aniq xabar qaytarish. 🚨  
+- AJV yordamida so‘rovlarni validatsiya qilishni o‘rganish. 🔍  
+- Xatolik xabarlarini foydalanuvchi uchun tushunarli qilish. 📝  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ Xatoliklarni Boshqarish  
+- Try-Catch, Markaziy Middleware, HTTP Status Codelar. 
+
+2️⃣ AJV Validatsiya  
+- JSON Schema yaratish va so‘rovlarni tekshirish.
+- So‘rovlarda ma'lumotlarni tekshirish (email, parol, raqam, matn uzunligi).  
+
+3️⃣ Xabarlarni Sozlash  
+- Maxsus xatolik xabarlari yaratish.
+- Foydalanuvchiga tushunarli xatolik xabarlarini qaytarish.  
+
+
+📌 Tavsiyalar:  
+✅ Postman yordamida xatoliklarni sinab ko‘ring.  
+✅ Xatolik xabarlarini .env faylida saqlang (til sozlamalari uchun).  
+✅ Har bir validatsiyani alohida faylda saqlang (schemas/ papkasida).  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- Express.js proyektini ishlab chiqish va uni testlash. 🚀  
+- Testlar uchun Mocha va Chai’dan foydalanish. 🧪
+- Proyektni ishlab chiqishdan so‘ng serverga joylashtirish. 🌐  
+
+
+📌 Foydali Havolalar:  
+- AJV hujjatlari: https://ajv.js.org  
+- HTTP Status Codelar: https://httpstatuses.com  
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

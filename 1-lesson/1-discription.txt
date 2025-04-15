@@ -1,0 +1,51 @@
+Assalomu alaykum! 🎉  
+Bugun Express.js texnologiyasi bo‘yicha darsligimizning birinchi videosini tayyorladim! Ushbu darsda Express.js Asoslari haqida suhbatlashib, quyidagi muhim mavzularni o‘rgandik:  
+
+📚 1-Dars: Express.js Asoslari  
+
+🎯 Maqsadlarimiz:  
+- Express.js nima ekanligini tushunish. 🤔  
+- Express.js yordamida birinchi oddiy server yaratish. 🖥️  
+- HTTP so‘rovlari (GET, POST, PUT, DELETE va boshqalar) bilan ishlashni o‘rganish. 📩  
+- Postman yordamida so‘rovlarni sinash. 🔍  
+- Birinchi marshrutni (route) yaratib, uni brauzerda sinash. 🌐  
+
+📖 Dars davomida o‘rganganlarimiz:  
+1️⃣ Express.js nima?  
+   - Node.js uchun eng mashhur va minimal veb-ramka. 🚀  
+   - RESTful API va veb-ilovalar yaratishda yordam beradi. 🌟  
+
+2️⃣ Loyihani tayyorlash:  
+   - Node.js o‘rnatildi.  
+   - npm install express buyrug‘i yordamida Express.js yuklandi. 📂  
+
+3️⃣ Birlamchi server yaratish:  
+   - "Hello World!" ilovasini ishga tushirib, brauzerda sinab ko‘rdik. 🌍  
+
+4️⃣ HTTP so‘rovlari bilan ishlash:  
+   - GET va POST so‘rovlardan foydalanib, ma’lumot yuborish va olishni o‘rgandik. ✉️  
+
+5️⃣ Middleware funksiyalar:  
+   - Logger middleware yaratdik va uning ishlashini tushundik. 🛠️  
+
+6️⃣ Amaliyot:  
+   - Har bir o‘quvchi o‘z serveriga yangi marshrutlar qo‘shdi va POST so‘rovlar uchun JSON ma’lumotlarini sinovdan o‘tkazdi. 💡  
+
+📌 Tavsiyalar:  
+✅ Postman dasturini yuklab oling va o‘rganing — bu HTTP so‘rovlarni sinashda juda qulay. 🔧  
+✅ Node.js va Express.js dokumentatsiyasini o‘qing — yangi funksiyalarni kashf qilish uchun juda foydali. 📜  
+✅ Amaliyot qilmasdan hech narsa o‘rganilmaydi! Har bir kodni o‘zingiz yozib ko‘ring. 🔥  
+✅ Savollaringiz bo‘lsa, izohlarda qoldiring yoki telegram kanalimga yozing. 📩  
+
+
+👀 Keyingi darsda nimalar bo‘ladi?  
+- Marshrutlarni yanada chuqurroq o‘rganamiz. 📍  
+- Middleware funksiyalaridan kengroq foydalanishni o‘rganamiz. 🛠️  
+- JSON ma’lumotlarini yuborish va olishga oid API yaratamiz. 🌐  
+
+📌 Foydali havolalar:  
+- Express.js hujjatlari: [https://expressjs.com](https://expressjs.com)  
+- Node.js yuklab olish: [https://nodejs.org](https://nodejs.org)  
+
+🎬 Videoni ko‘ring, like bosing va obuna bo‘ling! 👍 Bu mening ilk darsim, sizning fikringiz juda muhim! 💬  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

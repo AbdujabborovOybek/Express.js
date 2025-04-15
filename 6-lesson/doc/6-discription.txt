@@ -1,0 +1,54 @@
+Dars Tavsifi (Description):
+
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Fayllar bilan ishlashni o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: Fayllarni Upload, Download va Static Xizmat
+
+
+🎯 Maqsadlarimiz:  
+- Multer yordamida fayl yuklashni o‘rganish. 🖼️  
+- Response helper funksiyalari yaratish va ishlatish. 🛠️  
+- Fayl format va hajmini tekshirish. 🔍  
+- Statik fayllarni server orqali tarqatish. 📂  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ Response Helper Funksiyalari  
+- API javoblarini standartlashtirish.  
+- sendSuccess va sendError yaratish.  
+
+2️⃣ Multer bilan Fayl Yuklash  
+- Fayl yuklashni sozlash.  
+- Xatoliklarni boshqarish (hajm, format).  
+
+3️⃣ Statik Fayllar  
+- express.static() dan foydalanish.  
+- public papkasini tashkil etish.  
+
+4️⃣ Fayllarni Yuklab Olish  
+- res.download() va header sozlash.  
+
+
+📌 Tavsiyalar:  
+✅ Postman yordamida fayl yuklashni sinab ko‘ring.  
+✅ Multer hujjatlari: https://github.com/expressjs/multer
+✅ Fayl nomlarini unique qilish uchun Date.now() dan foydalaning.
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- cookie-parser o‘rnatilishi (autentifikatsiya). 🔑  
+- Sessiyalarni boshqarish va foydalanuvchi holatini saqlash. 📦  
+- JWT (JSON Web Token) bilan autentifikatsiya. 🔐
+- Refresh va access token lar bilan ishlash. 🔄
+
+📌 Foydali Havolalar:  
+- Multer hujjatlari: https://github.com/expressjs/multer
+- Express.js static files: https://expressjs.com/en/starter/static-files.html
+
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

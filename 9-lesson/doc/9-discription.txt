@@ -1,0 +1,53 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizdaAPI Xavfsizligi va Himoyani o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: API Xavfsizligi
+
+
+🎯 Maqsadlarimiz:  
+- HTTPS, CORS, Helmet bilan API ni asosiy himoya. 🔒  
+- Rate limiting orqali DDOS hujumlariga qarshi kurashish. 🛡️  
+- API kalitlari vaFirewall tushunchalarini o‘rganish. 🔑  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ API Xavfsizligi Asoslari  
+- HTTPS shifrlash, CORS sozlash, Helmet bilan header himoyasi.  
+
+2️⃣ So‘rovlar Tezligini Cheklash  
+- express-rate-limit yordamida hujumlarni oldini olish.  
+
+3️⃣ API Kalitlari  
+- Maxsus kalitlar yaratish va ularni tekshirish.  
+
+4️⃣ Firewall va WAF  
+- Tarmoq trafigini himoya qilish.  
+
+
+📌 Tavsiyalar:  
+✅ Postman yordamida xavfsizlik sozlamalarini sinab ko‘ring.  
+✅ Cloudflare dan foydalaning — bepul WAF xizmati.  
+✅ Har doim .env faylida maxfiy ma'lumotlarni saqlang!  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- Docker bilan konteynerizatsiya. 🐳  
+- CI/CD (Davomiy Integratsiya va Yetkazib Berish). 🔄  
+
+
+📌 Foydali Havolalar:
+- Helmet hujjatlari: https://helmetjs.github.io
+- Cloudflare WAF: https://www.cloudflare.com/waf  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- Xatoliklarni ushlab qolish va foydalanuvchiga qaytarish. 🚨
+- AJV yordamida so‘rovlarni validatsiya qilish. 🛠️
+- Xatoliklar va validatsiya xabarlarini sozlash. 📝
+- Loglarni saqlash va monitoring. 📊
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

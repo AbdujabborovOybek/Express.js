@@ -1,0 +1,81 @@
+Dars Rejasi: Middleware ishlatish va tushunish
+
+Maqsad:
+- Talabalar middleware nima ekanligini, turlarini va qanday ishlatilishini tushunishlari.
+- Express.js da o'rnatilgan middleware lar (express.json(), express.urlencoded()) bilan ishlashni o‘rganish.
+- Xatoliklarni boshqarish va logging qilishni o‘rganish.
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)
+- Darsning maqsadi va rejasini tushuntirish.
+- Middleware nima ekanligini tushuntirish.
+- Middleware ning veb-ilovalardagi ahamiyati haqida gapirish.
+
+
+2. Middleware Turlari va Ularni Qo‘llash (15 daqiqa)
+- Middleware nima?
+  - Middleware — bu so‘rov (request) va javob (response) o‘rtasidagi jarayonni boshqaruvchi funksiyalar.
+  - Har bir so‘rov middleware lar orqali o‘tadi va ular so‘rovni qayta ishlashda yordam beradi.
+
+- Middleware Turlari:
+  - Dastur darajasidagi middleware: Butun ilova bo‘ylab ishlaydi.
+  - Marshrut darajasidagi middleware: Faqat ma'lum bir marshrutlar uchun ishlaydi.
+  - Xato boshqaruv middleware: Xatoliklarni qayta ishlash uchun ishlatiladi.
+
+- Amaliy Misol:
+  - Oddiy middleware yaratish va uning ishlashini ko‘rsatish.
+  - Misol: Har bir so‘rovda vaqtni (timestamp) log qilish.
+
+
+3. Express.js da O'rnatilgan Middleware lar (15 daqiqa)
+- express.json():
+  - JSON formatidagi so‘rovlarni qayta ishlash uchun ishlatiladi.
+  - Misol: POST so‘rovida JSON ma'lumotlarni olish.
+
+- express.urlencoded():
+  - Forma ma'lumotlarini qayta ishlash uchun ishlatiladi.
+  - Misol: HTML formadan yuborilgan ma'lumotlarni olish.
+
+- Amaliy Misol:
+  - express.json() va express.urlencoded() middleware larini qo‘llash.
+  - POST so‘rovi orqali JSON va forma ma'lumotlarini qabul qilish.
+
+
+4. Xatoliklarni Boshqarish va Logging (15 daqiqa)
+- Xato Boshqaruv Middleware:
+  - Xatoliklarni qayta ishlash va foydalanuvchiga xato haqida ma'lumot qaytarish.
+  - Misol: 404 xato (topilmadi) va 500 xato (server xatosi).
+
+- Logging Middleware:
+  - Har bir so‘rov haqida ma'lumotlarni log qilish.
+  - Misol: So‘rov metodini, URL ni va vaqtni log qilish.
+
+- Amaliy Misol:
+  - Xato boshqaruv middleware yaratish va uni sinab ko‘rish.
+  - Logging middleware yaratish va so‘rovlarni log qilish.
+
+
+5. Yakuniy Qism (5-10 daqiqa)
+- Qisqacha Takrorlash:
+  - Middleware nima?
+  - Middleware turlari.
+  - Express.js da o'rnatilgan middleware lar.
+  - Xatoliklarni boshqarish va logging.
+
+- Savol-Javob:
+  - Talabalarning savollariga javob berish.
+
+- Vazifa:
+  - Talabalarga middleware yaratish vazifasi berish:
+    - Har bir so‘rovda foydalanuvchi agentini (user agent) log qilish.
+    - Xato boshqaruv middleware yaratish va uni sinab ko‘rish.
+
+
+Qo'shimcha Maslahatlar:
+- Dars davomida amaliy misollarni ko‘rsatish uchun Express.js dan foydalaning.
+- Talabalarni kod yozishga jalb qiling va ularning xatolarini tushuntirib bering.
+- Dars oxirida qisqa quiz yoki test o‘tkazish mumkin.
+
+

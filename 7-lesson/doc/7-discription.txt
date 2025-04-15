@@ -1,0 +1,45 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Cookie Fayllari va JWT asosida autentifikatsiyani o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: Autentifikatsiya (Session, Cookie, JWT)
+
+
+🎯 Maqsadlarimiz:
+- Cookie yordamida foydalanuvchi holatini saqlash. 🔐  
+- JWT (JSON Web Token) bilan token asosida autentifikatsiya. 🛡️  
+- Access va Refresh Tokenlarni boshqarish. 🔄  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ Session va Cookie  
+- cookie-parser sozlash.  
+- Foydalanuvchi sessionini yaratish va tekshirish.  
+
+2️⃣ JWT bilan Autentifikatsiya  
+- Token yaratish va tekshirish.  
+- Xavfsiz endpointlar yaratish.  
+
+3️⃣ Token Yangilash  
+- Access Token yangilash uchun Refresh Token ishlatish.  
+
+
+📌 Tavsiyalar:  
+✅ Postman yordamida tokenlarni sinab ko‘ring.  
+✅ JWT.io saytida tokenni dekod qiling: [https://jwt.io](https://jwt.io).  
+✅ Tokenlarni hech qachon frontendda ochiq saqlamang!  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- Ma'lumotlar bazasi bilan integratsiya (MySQL). 💾  
+- Parolni hash qilish (bcrypt.js, crypto, uuid). 🔑  
+
+
+📌 Foydali Havolalar:  
+- JWT hujjatlari: https://jwt.io
+- Express-session hujjatlari: https://github.com/expressjs/session  
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

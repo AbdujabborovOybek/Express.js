@@ -1,0 +1,48 @@
+Dars Tavsifi (Description):
+
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Loyihani Testlash va Joylashtirishni o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: Testlash va Deploy
+
+
+🎯 Maqsadlarimiz:  
+- Express.js loyihasini to‘liq ishlab chiqish va testlash. 🛠️  
+- Mocha va Chai yordamida test yozishni o‘rganish. 🧪  
+- Heroku yoki Vercel platformalariga loyihani joylashtirish. 🚀  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ Express.js Loyihasini Tuzish  
+- To‘g‘ri folder strukturasi va sozlamalar.  
+
+2️⃣ Test Yozish  
+- API endpointlarini tekshirish (Integration Test).  
+
+3️⃣ Serverga Joylashtirish  
+- Heroku/Vercel qo‘llanmasi va CI/CD.  
+
+
+📌 Tavsiyalar:  
+✅ GitHubda loyihani saqlang — deployni osonlashtiradi.  
+✅ Postman yordamida testlarni tekshirib ko‘ring.  
+✅ Heroku CLI yoki Vercel CLI dan foydalaning.  
+
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- Microservices arxitekturasi haqida tushuncha.   
+- Express.js yordamida microservices yaratish. 
+- API Gateway va microservices orqali ma'lumot almashish.  
+
+
+📌 Foydali Havolalar:  
+- Heroku hujjatlari: https://devcenter.heroku.com  
+- Vercel hujjatlari: https://vercel.com/docs  
+- Mocha hujjatlari: https://mochajs.org  
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

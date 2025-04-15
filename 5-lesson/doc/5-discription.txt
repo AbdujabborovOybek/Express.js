@@ -1,0 +1,44 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Validatsiya va ma'lumotlarni tekshirish mavzusini chuqur o‘rganamiz. Ushbu darsda quyidagi muhim mavzularni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: Validatsiya va Ma'lumotlarni Tekshirish
+
+🎯 Maqsadlarimiz:  
+- AJV kutubxonasi yordamida so‘rovlarni validatsiya qilishni o‘rganish. 🛠️  
+- Email, parol, raqam va matn uzunligini tekshirishni tushunish. 🔍  
+- Xatolik xabarlarini sozlash va foydalanuvchiga tushunarli javob qaytarish. 📩  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ AJV Kutubxonasi Asoslari  
+- JSON Schema yordamida validatsiya qoidalarini belgilash.  
+- So‘rovlarni tekshirish va xatoliklarni aniqlash.  
+
+
+2️⃣ Ma'lumotlarni Tekshirish  
+- Email, parol, raqam va matn uzunligi uchun validatsiya.  
+- Foydalanuvchi registratsiyasi misolida amaliy ko‘rsatma.  
+
+
+3️⃣ Xatolik Xabarlarini Sozlash  
+- Xatoliklarni foydalanuvchi uchun tushunarli qilish.  
+- JSON formatida strukturasi toza javob qaytarish.  
+
+
+📌 Tavsiyalar:  
+✅ Postman dasturidan foydalaning — so‘rovlarni tekshirishda juda qulay.  
+✅ AJV hujjatlarini o‘qing: [https://ajv.js.org](https://ajv.js.org).  
+✅ Har bir validatsiya qoidasini alohida sinab ko‘ring.  
+
+
+📌 Foydali Havolalar:
+- Express.js hujjatlari: https://expressjs.com
+- Node.js yuklab olish: https://nodejs.org
+- AJV hujjatlari: https://ajv.js.org
+- JSON Schema generator: https://jsonschema.net
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

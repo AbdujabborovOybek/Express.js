@@ -1,0 +1,45 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda RESTful API yaratish va JSON bilan ishlash mavzusini chuqur o‘rganamiz. Ushbu darsda quyidagi muhim mavzularni ko‘rib chiqamiz:
+
+📚 Dars Mavzusi: RESTful API yaratish va JSON bilan ishlash
+
+🎯 Maqsadlarimiz:
+- REST prinsiplari va Express.js da RESTful API yaratishni o‘rganish. 🤔  
+- CRUD amallarini (GET, POST, PUT, DELETE) bajarishni o‘rganish. 🛠️  
+- JSON formatida ma'lumot almashishni tushunish. 📂  
+- To‘g‘ri folder strukturasi yaratishni o‘rganish. 📁  
+
+📖 Dars Davomida O‘rganadiganlarimiz:
+
+1️⃣ REST Prinsiplari va Express.js da RESTful API Yaratish
+- REST nima?  
+- REST prinsiplari.  
+- Express.js da RESTful API yaratish.  
+
+2️⃣ CRUD Amallarini Bajarish
+- CRUD nima?  
+- GET, POST, PUT, DELETE metodlari bilan ishlash.  
+- Foydalanuvchilar ro‘yxati uchun CRUD amallarini bajarish.  
+
+3️⃣ JSON Formatida Ma'lumot Almashish
+- JSON nima?  
+- JSON formatida ma'lumot yuborish va qabul qilish.  
+
+4️⃣ Folder Strukturasi
+- Nima uchun folder strukturasi muhim?  
+- To‘g‘ri folder strukturasi yaratish.  
+
+
+📌 Tavsiyalar:
+✅ Postman dasturini yuklab oling va HTTP so‘rovlarni sinashda foydalaning. 🔧  
+✅ Express.js dokumentatsiyasini o‘qing — RESTful API haqida ko‘proq ma'lumot olish uchun. 📜  
+✅ Har bir kodni o‘zingiz yozib ko‘ring va sinab ko‘ring. 🔥  
+
+
+📌 Foydali Havolalar:
+- Express.js hujjatlari: https://expressjs.com
+- Node.js yuklab olish: https://nodejs.org 
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

@@ -1,0 +1,79 @@
+Dars Rejasi: Marshrutizatsiya (Routing) va URL parametrlaridan foydalanish
+
+Maqsad:
+- Talabalar marshrutizatsiya (routing) tushunchasini, URL parametrlarini va HTTP metodlarini (GET, POST, PUT, DELETE) tushunishlari.
+- Dinamik URL lar va ular bilan ishlashni o'rganish.
+
+
+Dars davomida:
+1. Kirish (10 daqiqa)
+  - Darsning maqsadi va rejasini tushuntirish.
+  - Marshrutizatsiya (routing) nima ekanligini tushuntirish.
+  - URL parametrlari va HTTP metodlarining ahamiyati haqida gapirish.
+
+2. URL Marshrutlari va HTTP Metodlari (15 daqiqa)
+  - URL Marshrutlari nima?
+  - URL marshrutlari veb-ilovalarda so'rovlarni qayta ishlash uchun ishlatiladi.
+  - Misol: /about, /contact, /users.
+  
+  HTTP Metodlari:
+  -GET: Ma'lumotlarni olish uchun ishlatiladi.
+  -POST: Yangi ma'lumot yaratish uchun ishlatiladi.
+  -PUT: Mavjud ma'lumotni yangilash uchun ishlatiladi.
+  -DELETE: Ma'lumotni o'chirish uchun ishlatiladi.
+  
+  Amaliy Misol:
+  - GET so'rovi orqali foydalanuvchilar ro'yxatini olish.
+  - POST so'rovi orqali yangi foydalanuvchi qo'shish.
+
+
+3. Parametrlar, So‘rovlar va Javoblar bilan Ishlish (15 daqiqa)
+  URL Parametrlari:
+  - URL da dinamik qiymatlarni o'tkazish.
+  - Misol: /users/123 bu yerda 123 foydalanuvchi ID si.
+  
+  So‘rovlar (Request):
+  - So'rov tarkibida ma'lumotlarni yuborish (query parameters, body).
+  - Misol: GET /users?name=John yoki POST /users (body da ma'lumot).
+  
+  Javoblar (Response):
+  - Serverdan qaytgan ma'lumotlar (JSON, HTML, XML).
+  - Misol: { "id": 1, "name": "John" }.
+
+  Amaliy Misol:
+  - Foydalanuvchi ID si bo'yicha ma'lumot olish: /users/123.
+  - So'rov orqali filtrlash: /users?role=admin.
+
+
+4. Dinamik URL lar va Ulardan Foydalanish (15 daqiqa)
+  Dinamik URL lar nima?
+  - URL dagi o'zgaruvchan qismlar.
+  - Misol: /posts/:postId, /categories/:categoryId.
+  
+  Dinamik URL lardan foydalanish:
+  - URL dagi parametrlarni olish va ularga asoslangan ma'lumotlarni qaytarish.
+  
+  Amaliy Misol:
+  - /posts/123 so'rovi orqali 123-ID li postni olish.
+  - /categories/tech so'rovi orqali "tech" kategoriyasidagi postlarni ko'rsatish.
+
+
+5. Yakuniy Qism (10 daqiqa)
+  Qisqacha Takrorlash:
+  - URL marshrutlari, HTTP metodlari, URL parametrlari, dinamik URL lar.
+  
+  Savol-Javob:
+  - Talabalarning savollariga javob berish.
+  
+  Vazifa:
+  - Talabalarga oddiy veb-ilova yaratish vazifasi berish:
+  - Foydalanuvchilar ro'yxatini ko'rsatish (GET).
+  - Yangi foydalanuvchi qo'shish (POST).
+  - Foydalanuvchi ma'lumotlarini yangilash (PUT).
+  - Foydalanuvchini o'chirish (DELETE).
+
+
+  Qo'shimcha Maslahatlar:
+  - Dars davomida amaliy misollarni ko'rsatish uchun dasturlash tilidan foydalaning (masalan, Python Flask, Node.js Express, yoki PHP Laravel).
+  - Talabalarni kod yozishga jalb qiling va ularning xatolarini tushuntirib bering.
+  - Dars oxirida qisqa quiz yoki test o'tkazish mumkin.

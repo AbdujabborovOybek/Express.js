@@ -1,0 +1,48 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizdaMa'lumotlar Bazasi bilan Integratsiyani o‘rganamiz. Ushbu darsda quyidagilarni ko‘rib chiqamiz:
+
+
+📚 Dars Mavzusi: MongoDB va MySQL
+
+
+🎯 Maqsadlarimiz:  
+- SQL va NoSQL farqlarini tushunish. 🗂️  
+- MongoDB (NoSQL) haqida nazariya. 🍃  
+- MySQL (SQL) bilan ishlash va CRUD amallarini bajarish. 🛠️  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:  
+
+1️⃣ SQL va NoSQL  
+- SQL va NoSQL afzalliklari va kamchiliklari.  
+- Qachon SQL, qachon NoSQL ishlatish kerak?  
+
+2️⃣ MongoDB Haqida  
+- Collection, Document va Field tushunchalari.  
+- MongoDB Atlas va Compass bilan tanishish.  
+
+3️⃣ MySQL bilan Ishlash  
+- MySQL2 kutubxonasi yordamida ulanish.  
+- CRUD amallarini bajarish.  
+
+
+📌 Tavsiyalar:  
+✅ MySQL Workbench yordamida ma'lumotlar bazasini boshqarish.  
+✅ MongoDB Atlas dan foydalaning — bulutli MongoDB xizmati.  
+✅ Har bir so‘rovni alohida sinab ko‘ring.  
+
+
+📌 Foydali Havolalar:  
+- MySQL hujjatlari: https://dev.mysql.com/doc 
+- MongoDB hujjatlari: https://docs.mongodb.com  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?  
+- API xavfsizligi asoslari (HTTPS, CORS, Helmet). 🔒 
+- Rate limiting (So‘rovlar tezligini cheklash). 🚀
+- API kalitlari (API keys) va ularni boshqarish. 🔑
+- Xavfsizlik devorlari (Firewalls) va API ni himoya qilish. 🛡️
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

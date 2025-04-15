@@ -1,0 +1,88 @@
+Dars Rejasi: API Xavfsizligi va Himoya
+
+Maqsad:  
+- Talabalar API xavfsizligining asosiy tamoyillarini tushunishlari.  
+- HTTPS, CORS, Helmet, Rate limiting, API kalitlari va Firewallar bilan tanishish.  
+- Amaliy loyihalarda xavfsizlikni oshirishni o‘rganish.  
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)  
+- API xavfsizligi nima? Ma'lumotlarni buzish, DDOS hujumlari, ma'lumot o‘g‘irlash.  
+- Dars rejasi: HTTPS, CORS, Helmet, Rate limiting, API kalitlari, Firewallar.  
+
+
+2. API Xavfsizligi Asoslari (15 daqiqa)  
+ - HTTPS:  
+  - HTTP vs HTTPS: Shifrlash (SSL/TLS) orqali ma'lumotlarni himoya qilish.  
+  - Certbot yordamida sertifikat o‘rnatish (Let's Encrypt).  
+ - CORS (Cross-Origin Resource Sharing):  
+  - Domains orasida resurs almashishni boshqarish.  
+  - Express.js da sozlash:  
+    npm install cors
+    
+    const cors = require("cors");
+    app.use(cors({ origin: "https://sizning-domeningiz.com" }));
+    
+ - Helmet:  
+  - HTTP headerlarni xavfsizlashtirish.  
+  - O‘rnatish va sozlash:  
+    npm install helmet
+    
+    const helmet = require("helmet");
+    app.use(helmet());
+    
+
+
+3. Rate Limiting (So‘rovlar Tezligini Cheklash) (10 daqiqa)  
+ - Nega kerak? DDOS hujumlariga qarshi kurashish.  
+  -express-rate-limit kutubxonasi:  
+  npm install express-rate-limit
+  
+  const rateLimit = require("express-rate-limit");
+  const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 daqiqa
+    max: 100, // Har bir IP 100 so‘rov
+  });
+  app.use(limiter);
+  
+- Misol: `/login` endpointiga 5 daqiqada 5 marta so‘rov cheklovi.  
+
+
+4. API Kalitlari (API Keys) va Boshqarish (10 daqiqa)  
+ - API kalit nima? API ga ruxsat berish uchun maxsus token.  
+ - Kalit yaratish va tekshirish:  
+  // Middleware: API kalitni tekshirish
+  const apiKeyAuth = (req, res, next) => {
+    const apiKey = req.headers["x-api-key"];
+    if (apiKey !== "sizning_maxfiy_kalitingiz") {
+      return res.status(401).json({ error: "Yaroqsiz API kaliti" });
+    }
+    next();
+  };
+  
+ - Kalitlarni saqlash:  
+  - Ma'lumotlar bazasida hash qilingan kalitlarni saqlash.  
+  - Environment variables (.env) orqali himoya qilish.  
+
+
+5. Xavfsizlik Devorlari (Firewalls) va API Himoya (10 daqiqa)  
+ - Firewall nima? Tarmoq trafigini nazorat qiluvchi tizim.  
+ - Web Application Firewall (WAF):  
+  - Cloudflare, AWS WAF kabi xizmatlar.  
+  - SQL Injection, XSS hujumlarini bloklash.  
+ - API Gateway:  
+  - Trafikni boshqarish, monitoring qilish (AWS API Gateway, Kong).  
+
+
+6. Yakuniy Qism (5-10 daqiqa)  
+ - Takrorlash:  
+  - HTTPS, CORS, Helmet.  
+  - Rate limiting, API kalitlari, Firewallar.  
+ - Savol-javob: Talabalar savollari.  
+ - Vazifa:  
+  - Loyihaga Helmet va Rate limiting qo‘shish.  
+  - API kalitni qo‘llab, `/api/data` endpointini himoya qilish.  
+
+

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "brithday": "1990-01-01",
+    "email": "john@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "brithday": "1990-01-01",
+    "email": "jane@mail.com"
+  },
+  {
+    "name": "Oybek",
+    "brithday": "1990-01-01",
+    "email": "oybek@gmail.com",
+    "id": "83cc1668-c528-4b45-ab97-49ae2826f450"
+  }
+]

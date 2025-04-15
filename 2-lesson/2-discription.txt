@@ -1,0 +1,81 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Marshrutizatsiya (Routing) va URL parametrlaridan foydalanish mavzusini chuqur o‘rganamiz. Ushbu darsda quyidagi muhim mavzularni ko‘rib chiqamiz:
+
+📚 2-Dars Mavzusi: Marshrutizatsiya (Routing) va URL Parametrlari
+
+🎯 Maqsadlarimiz:
+   - URL marshrutlari va HTTP metodlari (GET, POST, PUT, DELETE) bilan tanishish. 🤔  
+   - Parametrlar, so‘rovlar va javoblar bilan ishlashni o‘rganish. 📩  
+   - Dinamik URL lar yaratish va ularni amaliy loyihalarda qo‘llash. 🌐  
+   - Postman yordamida so‘rovlarni sinash va natijalarni tekshirish. 🔍  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:
+
+1️⃣ URL Marshrutlari va HTTP Metodlari
+   - URL Marshrutlari nima?  
+   - Veb-ilovalarda so‘rovlarni qayta ishlash uchun ishlatiladigan yo‘llar.  
+   - Misol: /about, /users, /posts.  
+
+   - HTTP Metodlari:  
+   - GET: Ma'lumotlarni olish.  
+   - POST: Yangi ma'lumot yaratish.  
+   - PUT: Mavjud ma'lumotni yangilash.  
+   - DELETE: Ma'lumotni o‘chirish.  
+
+   - Amaliy Misol:  
+   - GET so‘rovi orqali foydalanuvchilar ro‘yxatini olish.  
+   - POST so‘rovi orqali yangi foydalanuvchi qo‘shish.  
+
+
+2️⃣ Parametrlar, So‘rovlar va Javoblar bilan Ishlish
+   - URL Parametrlari:  
+   - URL da dinamik qiymatlarni o‘tkazish.  
+   - Misol: /users/123 bu yerda 123 foydalanuvchi ID si.  
+
+   - So‘rovlar (Request):  
+   - So‘rov tarkibida ma'lumotlarni yuborish (query parameters, body).  
+   - Misol: GET /users?name=John yoki POST /users (body da ma'lumot).  
+
+   - Javoblar (Response):  
+   - Serverdan qaytgan ma'lumotlar (JSON, HTML, XML).  
+   - Misol: { "id": 1, "name": "John" }.  
+
+   - Amaliy Misol:  
+   - Foydalanuvchi ID si bo‘yicha ma'lumot olish: /users/123.  
+   - So‘rov orqali filtrlash: /users?role=admin.  
+
+
+3️⃣ Dinamik URL lar va Ulardan Foydalanish
+   - Dinamik URL lar nima?  
+   - URL dagi o‘zgaruvchan qismlar.  
+   - Misol: /posts/:postId, /categories/:categoryId.  
+
+   - Dinamik URL lardan foydalanish:  
+   - URL dagi parametrlarni olish va ularga asoslangan ma'lumotlarni qaytarish.  
+
+   - Amaliy Misol:  
+   - /posts/123 so‘rovi orqali 123-ID li postni olish.  
+   - /categories/tech so‘rovi orqali "tech" kategoriyasidagi postlarni ko‘rsatish.  
+
+
+📌 Tavsiyalar:
+✅ Postman dasturini yuklab oling va o‘rganing — bu HTTP so‘rovlarni sinashda juda qulay. 🔧  
+✅ Express.js dokumentatsiyasini o‘qing — yangi funksiyalarni kashf qilish uchun juda foydali. 📜  
+✅ Amaliyot qilmasdan hech narsa o‘rganilmaydi! Har bir kodni o‘zingiz yozib ko‘ring. 🔥  
+✅ Savollaringiz bo‘lsa, izohlarda qoldiring yoki telegram kanalimga yozing. 📩  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?
+   - Middleware funksiyalar bilan ishlashni o‘rganamiz. 🛠️  
+   - RESTful API yaratishni davom ettiramiz. 🌐  
+   - Ma'lumotlar bazasi bilan integratsiya qilishni boshlaymiz. 💾  
+
+
+📌 Foydali Havolalar:
+   - Express.js hujjatlari: https://expressjs.com
+   - Node.js yuklab olish: https://nodejs.org
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

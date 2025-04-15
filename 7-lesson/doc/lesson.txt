@@ -1,0 +1,71 @@
+Dars Rejasi: Cookie Fayllari va JWT bilan Autentifikatsiya
+
+Maqsad:
+- Cookie va JWT asosida autentifikatsiya tizimini tushunishlari.  
+- Cookie-parser va JWT kutubxonalarini o‘rnatish va sozlashni o‘rganish.  
+- Access va Refresh Tokenlar bilan ishlashni tushunish.  
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)  
+- Autentifikatsiya nima? Foydalanuvchini identifikatsiya qilish.  
+- Dars rejasi: cookie, JWT, Access/Refresh Token.
+
+
+2. Sessionlar va Cookie Fayllari (15 daqiqa)  
+- Express-session va cookie-parser o‘rnatish:  
+  npm install express-session cookie-parser
+  
+- Cookie-parser:  
+  const cookieParser = require("cookie-parser");
+  app.use(cookieParser());
+  
+- Amaliyot:  
+  - Foydalanuvchi login qilganda session yaratish:  
+    app.post("/login", (req, res) => {
+      req.session.user = { id: 1, name: "Ali" };
+      res.send("Login muvaffaqiyatli!");
+    });
+    
+
+3. JWT (JSON Web Token) bilan Autentifikatsiya (15 daqiqa)  
+- JWT nima? Shifrlangan JSON obyekti (Header, Payload, Signature).  
+- jsonwebtoken o‘rnatish:  
+  npm install jsonwebtoken
+  
+- Token yaratish:  
+  const jwt = require("jsonwebtoken");
+  const accessToken = jwt.sign({ userId: 1 }, "sirli_kalit", { expiresIn: "15m" });
+  const refreshToken = jwt.sign({ userId: 1 }, "refresh_kalit", { expiresIn: "7d" });
+  
+- Token tekshirish middleware:  
+  const verifyToken = (req, res, next) => {
+    const token = req.headers.authorization?.split(" ")[1];
+    if (!token) return res.status(401).send("Token topilmadi!");
+    jwt.verify(token, "sirli_kalit", (err, user) => {
+      if (err) return res.status(403).send("Yaroqsiz token!");
+      req.user = user;
+      next();
+    });
+  };
+  
+
+
+4. Refresh Token va Access Token (15 daqiqa)  
+- Nega ikkita token?  
+  - Access Token: Qisqa muddatli (15 daqiqa).  
+  - Refresh Token: Uzoq muddatli (7 kun), yangi Access Token olish uchun.  
+
+- Refresh Token saqlash: Ma'lumotlar bazasida yadi.  
+- Token yangilash endpointi:  
+  javascript
+  app.post("/refresh", (req, res) => {
+    const refreshToken = req.body.refreshToken;
+    if (!refreshToken) return res.status(401).send("Refresh Token kerak!");
+    jwt.verify(refreshToken, "refresh_kalit", (err, user) => {
+      if (err) return res.status(403).send("Yaroqsiz Refresh Token!");
+      const newAccessToken = jwt.sign({ userId: user.id }, "sirli_kalit", { expiresIn: "15m" });
+      res.json({ accessToken: newAccessToken });
+    });
+  });

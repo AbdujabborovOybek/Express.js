@@ -1,0 +1,101 @@
+Dars Rejasi: Proyektni Ishga Tushirish, Testlash va Joylashtirish
+
+Maqsad:  
+- Talabalar Express.js loyihasini toʻliq ishlab chiqish, testlash va serverga joylashtirishni o‘rganish.  
+- Mocha va Chai kutubxonalari yordamida test yozishni tushunish.  
+- Heroku, Vercel kabi platformalarga loyihani deploy qilishni o‘rganish.  
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)  
+- Darsning maqsadi: Loyihani yakunlash, testlash va serverga joylashtirish.  
+- Testlash nima? Kodning toʻgʻri ishlashini tekshirish.  
+- Deploy nima? Loyihani internetga chiqarish.  
+
+
+2. Express.js Loyihasini Ishga Tushirish (10 daqiqa)  
+- Loyiha strukturasi:  
+  my-express-app/
+    ├── src/
+    │   ├── controllers/
+    │   ├── routes/
+    │   ├── models/
+    │   └── app.js
+    ├── test/
+    │   └── app.test.js
+    ├── package.json
+    └── .env
+- Asosiy qadamlar:  
+  - npm init -y bilan loyihani boshlash.  
+  - express, dotenv, mocha, chai kutubxonalarini o‘rnatish.  
+  - .env faylida muhim sozlamalarni saqlash (PORT, DB_URL).  
+
+
+3. Testlash: Mocha va Chai (20 daqiqa)  
+- Mocha va Chai nima?  
+  - Mocha: Test frameworki.  
+  - Chai: Assertion kutubxonasi (kutishlar yozish).  
+- O‘rnatish:  
+  bash
+  npm install mocha chai --save-dev
+  
+- Test yozish:  
+  javascript
+  test/app.test.js
+  const chai = require("chai");
+  const chaiHttp = require("chai-http");
+  const app = require("../src/app");
+  
+  chai.use(chaiHttp);
+  const expect = chai.expect;
+  
+  describe("GET /api/users", () => {
+    it("Barcha foydalanuvchilarni qaytarishi kerak", (done) => {
+      chai
+        .request(app)
+        .get("/api/users")
+        .end((err, res) => {
+          expect(res).to.have.status(200);
+          expect(res.body).to.be.an("array");
+          done();
+        });
+    });
+  });
+  
+- Testlarni ishga tushirish:  
+  npx mocha test/app.test.js
+  
+- Test turlari:  
+  - Unit Test: Alohida funksiyalarni tekshirish.  
+  - Integration Test: API endpointlarini tekshirish.  
+
+
+4. Loyihani Serverga Joylashtirish (Heroku/Vercel) (15 daqiqa)  
+- Joylashtirish platformalari:  
+  - Heroku:  
+    - Procfile yaratish: web: node src/app.js.  
+    - GitHub yoki CLI orqali deploy qilish.  
+  - Vercel:  
+    - vercel.json sozlamalari:  
+      json
+      {
+        "version": 2,
+        "builds": [{ "src": "src/app.js", "use": "@vercel/node" }],
+        "routes": [{ "src": "/(.*)", "dest": "src/app.js" }]
+      }
+      
+- Muhim qadamlar:  
+  - package.json da start skriptini sozlash: "start": "node src/app.js".  
+  - Environment variableslarni platformaga qo‘shish.  
+  - Loyihani GitHubga ulash (CI/CD).  
+
+
+5. Yakuniy Qism (5-10 daqiqa)  
+- Takrorlash:  
+  - Testlashning ahamiyati.  
+  - Deployment qadamlarini qisqacha ko‘rib chiqish.  
+- Savol-javob: Talabalarning savollari.  
+- Vazifa:  
+  - Loyihaga yangi endpoint qo‘shib, test yozish.  
+  - Loyihani Heroku yoki Vercelga joylashtirish.

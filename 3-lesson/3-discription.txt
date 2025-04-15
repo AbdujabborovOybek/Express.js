@@ -1,0 +1,48 @@
+Assalomu alaykum! 🎉  
+Bugungi darsimizda Middleware ishlatish va tushunish mavzusini chuqur o‘rganamiz. Ushbu darsda quyidagi muhim mavzularni ko‘rib chiqamiz:
+
+📚 Dars Mavzusi: Middleware ishlatish va tushunish
+
+🎯 Maqsadlarimiz:
+- Middleware nima ekanligini tushunish. 🤔  
+- Middleware turlari va ularni qanday ishlatishni o‘rganish. 🛠️  
+- Express.js da o'rnatilgan middleware lar (express.json(), express.urlencoded()) bilan ishlash. 📂  
+- Xatoliklarni boshqarish va logging qilishni o‘rganish. 🔍  
+
+
+📖 Dars Davomida O‘rganadiganlarimiz:
+
+1️⃣ Middleware Turlari va Ularni Qo‘llash
+    - Middleware nima?  
+    - Dastur va marshrut darajasidagi middleware lar.  
+    - Amaliy misollar orqali middleware yaratish va ishlatish.  
+
+2️⃣ Express.js da O'rnatilgan Middleware lar
+    - express.json() va express.urlencoded() middleware larini qo‘llash.  
+    - JSON va forma ma'lumotlarini qabul qilish.  
+
+3️⃣ Xatoliklarni Boshqarish va Logging
+    - Xato boshqaruv middleware yaratish.  
+    - Logging middleware yaratish va so‘rovlarni log qilish.  
+
+
+📌 Tavsiyalar:
+✅ Postman dasturini yuklab oling va HTTP so‘rovlarni sinashda foydalaning. 🔧  
+✅ Express.js dokumentatsiyasini o‘qing — middleware lar haqida ko‘proq ma'lumot olish uchun. 📜  
+✅ Har bir kodni o‘zingiz yozib ko‘ring va sinab ko‘ring. 🔥  
+
+
+👀 Keyingi Darsda Nimalar Bo‘ladi?
+    - RESTful API ni davom ettirish. 🌐  
+    - CRUD amallarini bajarish. 📝
+    - JSON formatida ma'lumot almashish. 📦  
+
+
+📌 Foydali Havolalar:
+    - Express.js hujjatlari: https://expressjs.com
+    - Node.js yuklab olish: https://nodejs.org
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊
+ 

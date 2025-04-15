@@ -1,0 +1,100 @@
+Dars Rejasi: Xatoliklarni Boshqarish va Validatsiya
+
+Maqsad:  
+- Talabalar xatoliklarni ushlab qolish va foydalanuvchiga tushunarli javob qaytarishni o‘rganish.  
+- AJV kutubxonasi yordamida so‘rovlarni validatsiya qilishni takomillashtirish.  
+- Xatolik xabarlarini sozlash va ularni foydalanuvchi uchun aniqroq qilish.  
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)  
+- Xatoliklar nima? Dasturda kutilmagan holatlar (ma'lumot yetishmasligi, noto‘g‘ri format).  
+- Nega muhim? Foydalanuvchiga tushunarli xabar va dastur xavfsizligi.  
+- Dars rejasi: Xatoliklarni boshqarish, AJV validatsiya, xabarlarni sozlash.  
+
+
+2. Xatoliklarni Ushlab Qolish va Qaytarish (15 daqiqa)  
+- Try-Catch bilan ishlash:  
+  app.get("/user/:id", async (req, res) => {
+    try {
+      const user = await getUserById(req.params.id);
+      if (!user) throw new Error("Foydalanuvchi topilmadi");
+      res.json(user);
+    } catch (err) {
+      res.status(404).json({ error: err.message });
+    }
+  });
+- Markaziy Xatolik Boshqaruv Middleware:  
+  app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ 
+      success: false, 
+      message: "Server xatosi", 
+      error: err.message 
+    });
+  });
+- HTTP Status Codelar:  
+  - 400 (Bad Request), 404 (Not Found), 500 (Server Error).  
+  - Misol: res.status(400).json({ error: "Email noto‘g‘ri" }).
+
+
+3. AJV yordamida So‘rovlarni Validatsiya Qilish (15 daqiqa)  
+- AJV ni qayta ko‘rib chiqish:  
+  - JSON Schema yordamida so‘rovni tekshirish.  
+  - O‘rnatish:  
+    npm install ajv
+- Validatsiya Schemasi:  
+  const registerSchema = {
+    type: "object",
+    properties: {
+      email: { type: "string", format: "email" },
+      password: { type: "string", minLength: 8 },
+    },
+    required: ["email", "password"],
+  };
+- Middleware yaratish:  
+  const validate = (schema) => (req, res, next) => {
+    const ajv = new Ajv();
+    const isValid = ajv.compile(schema);
+    if (!isValid(req.body)) {
+      return res.status(400).json({ errors: isValid.errors });
+    }
+    next();
+  };
+
+  // Foydalanish
+  app.post("/register", validate(registerSchema), (req, res) => {
+    // Ma'lumotlar to‘g‘ri
+  });
+
+
+4. Xatolik va Validatsiya Xabarlarini Sozlash (10 daqiqa)  
+- Xatoliklarni formatlash:  
+  const errors = validate.errors.map(err => ({
+    field: err.instancePath.replace("/", ""), // /email -> email
+    message: err.message,
+  }));
+  res.status(400).json({ errors });
+- Maxsus xabarlar yaratish:  
+  const customMessages = {
+    "minLength": "Parol kamida 8 belgidan iborat bo‘lishi kerak",
+    "format": "Noto‘g‘ri email formati"
+  };
+
+  // Xatolikni o‘zgartirish
+  const formattedErrors = validate.errors.map(err => ({
+    field: err.instancePath,
+    message: customMessages[err.keyword] || err.message,
+  }));
+
+
+5. Yakuniy Qism (5-10 daqiqa)  
+- Takrorlash:  
+  - Xatoliklar turlari va ularni boshqarish.  
+  - AJV validatsiya va xabarlarni sozlash.  
+- Savol-javob: Talabalar savollari.  
+- Vazifa:  
+  - /login endpointi uchun validatsiya qo‘shish (email, parol).  
+  - Xatoliklarni formatlash va foydalanuvchiga 400 status bilan qaytarish.  
+

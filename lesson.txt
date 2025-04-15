@@ -1,0 +1,62 @@
+1. Express.js haqida umumiy tushuncha va o‘rnatish  
+   - Express.js nima va uni nimaga ishlatish mumkin?  
+   - Express.js o‘rnatilishi va asosiy konfiguratsiya  
+   - Express.js arxitekturasi  
+
+2. Marshrutizatsiya (Routing) va URL parametrlaridan foydalanish  
+   - URL marshrutlari va HTTP metodlari (GET, POST, PUT, DELETE)  
+   - Parametrlar, so‘rovlar va javoblar bilan ishlash  
+   - Dinamik URL lar va ularni ishlatish  
+
+3. Middleware ishlatish va tushunish  
+   - Middleware turlari va ularni qanday ishlatish  
+   - Express.js da o'rnatilgan middleware lar (express.json(), express.urlencoded())  
+   - Xatoliklarni boshqarish va logging 
+
+4. RESTful API yaratish va JSON bilan ishlash  
+   - REST prinsiplari va Express.js da RESTful API yaratish  
+   - CRUD amallarini bajarish (GET, POST, PUT, DELETE)  
+   - JSON formatida ma'lumot almashis
+   - Folder strukturasi
+
+5. Validatsiya va ma'lumotlarni tekshirish  
+   - AJV yordamida so‘rovlarni validatsiya qilish  
+   - So‘rovlarda ma'lumotlarni tekshirish (email, parol, raqam, matn uzunligi)  
+   - Xatolik xabarlarini sozlash va foydalanuvchiga qaytarish  
+
+6. Fayllar bilan ishlash: Upload, download va static fayllar  
+   - Response helper funksiyalari yaratish
+   - Multer yordamida faylni yuklash  
+   - Fayl formatlari va hajmini tekshirish  
+   - Statik fayllarni Express.js serveri orqali xizmat qilish  
+
+7. Sessionlar, cookie fayllari va JWT bilan autentifikatsiya  
+   - cookie-parser o‘rnatilishi  
+   - Sessiyalarni boshqarish va foydalanuvchi holatini saqlash  
+   - JWT (JSON Web Token) bilan autentifikatsiya  
+   - Refresh va access token lar bilan ishlash
+
+8. Ma'lumotlar bazasi bilan integratsiya  
+   - MongoDB bilan ishlash va CRUD amallarini bajarish  
+   - MySQL bilan ishlash va Sequelize ORM yordamida ma'lumotlarni boshqarish  
+
+9. API xavfsizligi va himoya  
+   - API xavfsizligi asoslari (HTTPS, CORS, Helmet)  
+   - Rate limiting (So‘rovlar tezligini cheklash)  
+   - API kalitlari (API keys) va ularni boshqarish  
+   - Xavfsizlik devorlari (Firewalls) va API ni himoya qilish  
+
+10. Xatoliklarni boshqarish va validatsiya  
+   - Xatoliklarni ushlab qolish va foydalanuvchiga qaytarish  
+   - AJV yordamida so‘rovlarni validatsiya qilish  
+   - Xatoliklar va validatsiya xabarlarini sozlash  
+
+11. Proyektni ishlab chiqish, testlash va joylashtirish  
+   - Express.js proyektini ishlab chiqish va uni testlash  
+   - Testlar uchun Mocha va Chai’dan foydalanish  
+   - Proyektni ishlab chiqishdan so‘ng serverga joylashtirish (Heroku, Vercel, yoki boshqa platformalar)  
+
+12. Microservices va Express.js  
+   - Microservices arxitekturasi haqida tushuncha  
+   - Express.js yordamida microservices yaratish  
+   - API Gateway va microservices orqali ma'lumot almashish  

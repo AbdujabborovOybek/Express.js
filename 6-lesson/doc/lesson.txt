@@ -1,0 +1,126 @@
+Dars Rejasi: Fayllar bilan ishlash (Upload, Download va Static fayllar)
+
+Maqsad:
+- Talabalar fayllarni yuklash, yuklab olish va static fayllarni boshqarishni o‘rganishlari.
+- Multer kutubxonasi yordamida fayl yuklashni tushunish.
+- Response helper funksiyalari yaratish va fayl formatlari/hajmini tekshirishni o‘rganish.
+
+
+Darsning Bosqichlari:
+
+1. Kirish (5 daqiqa)
+- Fayllar bilan ishlashning ahamiyati: Veb-ilovalarda fayl almashish (rasmlar, hujjatlar, videolar).
+- Dars rejasi: Upload, download, static fayllar va response helperlar.
+
+
+2. Response Helper Funksiyalari (10 daqiqa)
+- Nega kerak? API javoblarini standartlashtirish.
+- Misol: success va error funksiyalari.
+  javascript
+  // successResponse.js
+  const success = (res, data, message = "Success", statusCode = 200) => {
+    res.status(statusCode).json({ success: true, message, data });
+  };
+
+  // errorResponse.js
+  const error = (res, message = "Error", statusCode = 500) => {
+    res.status(statusCode).json({ success: false, message });
+  };
+  
+- Amaliyot: Foydalanuvchilar ro‘yxatini olishda success dan foydalanish.
+
+
+3. Multer yordamida Fayl Yuklash (15 daqiqa)
+- Multer nima? Express.js uchun fayl yuklash middleware.
+- O‘rnatish:  
+  bash
+  npm install multer
+  
+- Konfiguratsiya:  
+  javascript
+  const multer = require("multer");
+  const storage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, "uploads/"),
+    filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname),
+  });
+  const upload = multer({ storage });
+  
+- Fayl yuklash endpointi:  
+  javascript
+  app.post("/upload", upload.single("file"), (req, res) => {
+    success(res, { path: req.file.path }, "Fayl muvaffaqiyatli yuklandi");
+  });
+  
+
+
+4. Fayl Formatlari va Hajmini Tekshirish (10 daqiqa)
+- Validatsiya qoidalari:  
+  - Faqat rasm fayllarini qabul qilish (image/png, image/jpeg).
+  - Maksimal hajm: 5 MB.
+  javascript
+  const fileFilter = (req, file, cb) => {
+    if (file.mimetype.startsWith("image/")) cb(null, true);
+    else cb(new Error("Faqat rasm fayllari yuklanishi mumkin"), false);
+  };
+
+  const upload = multer({
+    storage,
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5 MB
+    fileFilter,
+  });
+  
+- Xatolikni qaytarish:  
+  javascript
+  app.use((err, req, res, next) => {
+    if (err instanceof multer.MulterError) {
+      error(res, "Fayl hajmi 5MB dan katta", 400);
+    } else {
+      error(res, err.message, 500);
+    }
+  });
+  
+
+
+5. Statik Fayllarni Xizmat Qilish (10 daqiqa)
+- express.static() middleware:  
+  javascript
+  app.use("/static", express.static("public"));
+  
+  - public papkasidagi fayllar /static endpointi orqali ochiq (masalan: http://localhost:8080/static/image.jpg).
+- Papka tuzulmasi:  
+  
+  project/
+    ├── public/
+    │   ├── images/
+    │   └── documents/
+    ├── uploads/
+    └── app.js
+  
+
+
+6. Fayllarni Yuklab Olish (10 daqiqa)
+- res.download() yordamida:  
+  javascript
+  app.get("/download/:filename", (req, res) => {
+    const filePath = path.join(__dirname, "uploads", req.params.filename);
+    res.download(filePath, (err) => {
+      if (err) error(res, "Fayl topilmadi", 404);
+    });
+  });
+  
+- Header sozlash:  
+  javascript
+  res.setHeader("Content-Disposition", attachment; filename=${fileName});
+  
+
+
+7. Yakuniy Qism (5-10 daqiqa)
+- Takrorlash:  
+  - Fayl yuklash (Multer), yuklab olish, static fayllar.
+  - Response helperlar va validatsiya.
+- Savol-javob: Talabalarning savollariga javob.
+- Vazifa:  
+  - Profil rasmini yuklash uchun endpoint yaratish (faqat JPEG/PNG, maksimal 2MB).
+  - Yuklangan fayllarni GET /files endpointida ro‘yxatini qaytarish.
+
+

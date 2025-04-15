@@ -1,0 +1,114 @@
+1-dars: Express.js Asoslari
+
+Maqsadlar:
+- Express.js haqida umumiy tushuncha hosil qilish.
+- Express.js yordamida sodda server yaratishni o‘rganish.
+- Asosiy HTTP so‘rovlariga javob berishni o‘rganish (GET, POST, PUT, PATCH, DELETE, va boshqalar).
+- Postman yordamida HTTP so‘rovlarni sinov qilish.
+- Express.js ilovasini ishga tushirish va birinchi marshrutni yaratish.
+
+
+Dars Rejasi:
+1. Kirish
+   - Express.js nima?:
+     - Node.js uchun minimal veb-ramka.
+     - Veb-ilovalar va API'larni tez va oson yaratish imkoniyatini beradi.
+     - HTTP so‘rovlarini boshqarish, middleware qo‘llash va ko‘plab boshqa qulayliklarni taqdim etadi.
+   - Nega Express.js?:
+     - Kodni soddalashtiradi va tuzilmaviy boshqarishni osonlashtiradi.
+     - Kengaytiriladigan, modulli va o‘rnatilgan middleware'lar bilan ishlash imkoniyati.
+     - Ko‘plab real loyihalar uchun ishlatiladi, shu jumladan RESTful API'lar, veb-ilovalar va boshqalar.
+
+2. Dastur Muhitini Tayyorlash
+   - Node.js o‘rnatilishi:
+     - Node.js ni o‘rnatish (https://nodejs.org).
+     - node -v va npm -v buyrug‘ini ishlatib, o‘rnatilgan versiyalarni tekshirish.
+   - Express.js o‘rnatilishi:
+     - npm init -y – yangi Node.js loyihasi yaratish.
+     - npm install express – Express.js ni o‘rnatish.
+   - Loyihani tashkil etish:
+     - src papkasini yaratish va ilova faylini (app.js) yaratish.
+     - node_modules papkasini qo‘shish va package.json ni yaratish.
+
+3. Birlamchi Express.js Ilovasini Yaratish
+   - Express.js bilan "Hello World" ilovasi yaratish:
+     - app.js faylini yaratish va uni konfiguratsiya qilish:
+       javascript
+       const express = require('express');
+       const app = express();
+
+       // Home sahifasiga GET so‘rovini qabul qilish: GET - /
+       app.get('/', (req, res) => {
+           res.send('Hello World!');
+       });
+
+       const PORT = process.env.PORT || 8080;
+       app.listen(PORT, () => {
+           console.log(Server is running on http://localhost:${PORT});
+       });
+       
+   - Ishga tushirish:
+     - node app.js buyruq yordamida ilovani ishga tushirish.
+     - Brauzerdan http://localhost:8080 manziliga kirish va "Hello World!" ni ko‘rish.
+   - Savollar va javoblar:
+     - Nima uchun app.get ishlatiladi? Va bu qanday ishlaydi?
+     - req va res obyektlari haqida qisqacha tushuncha.
+     - Serverni qanday to‘xtatish va qayta ishga tushirish mumkin?
+
+4. HTTP So‘rovlari va Javoblar
+   - GET so‘rovi:
+     - Foydalanuvchidan ma'lumot olish uchun GET so‘rovi ishlatiladi.
+     - Kod misoli:
+       javascript
+       app.get('/greet', (req, res) => {
+           res.send('Welcome to Express!');
+       });
+       
+     - Brauzerda http://localhost:8080/greet manziliga kirish va "Welcome to Express!" ni ko‘rish.
+   - POST so‘rovi:
+     - Ma'lumot yuborish uchun POST so‘rovi ishlatiladi.
+     - express.json() middleware'ini ishlatib, JSON formatidagi ma'lumotni qabul qilish.
+     - Kod misoli:
+       javascript
+       app.post('/data', express.json(), (req, res) => {
+           const { name, age } = req.body;
+           res.send(Hello, ${name}! You are ${age} years old.);
+       });
+       
+     - POST so‘rovini yuborish: Postman yoki cURL yordamida sinov qilish.
+
+5. Asosiy Middleware va Routing
+   - Middleware haqida tushuncha:
+     - Middleware funksiyalarni tushunish va ularni ishlatish.
+     - Kod misoli: Logger middleware:
+       javascript
+       app.use((req, res, next) => {
+           console.log(Request received: ${req.method} ${req.url});
+           next();  // keyingi middleware yoki marshrutga o‘tish
+       });
+       
+     - Routing:
+       - Routinlarni qanday tashkil qilish va ularni bir-biriga yo‘naltirish.
+       - Route parametrlari bilan ishlash:
+         javascript
+         app.get('/user/:id', (req, res) => {
+             res.send(User ID: ${req.params.id});
+         });
+         
+
+6. Amaliyot
+   - O‘zgarishlarni kiritish: O‘quvchilar o‘zlari tomonidan yangi marshrutlar qo‘shish, GET va POST so‘rovlarini yaratish.
+   - Misollar:
+     - Yangi GET marshruti yaratish, masalan, /about yoki /contact.
+     - JSON formatidagi POST so‘rovini ishlatish.
+
+7. Xulosa va Yakuniy So‘zlar
+   - Kechagi darsni qisqacha tahlil qilish:
+     - Nima o‘rgandik?
+     - Express.js asoslarini qanchalik tushundik?
+   - Kelgusi darslar rejalari:
+     - Keyingi darsda routingni yanada chuqurlashtirish va middleware'lar bilan ishlash.
+     - API yaratish, JSON ma'lumotlarini yuborish va olish haqida o‘rganish.
+
+Qo‘shimcha Resurslar:
+- Rasmiy Express.js hujjatlari: https://expressjs.com/
