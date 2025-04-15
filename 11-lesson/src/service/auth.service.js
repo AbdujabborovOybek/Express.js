@@ -7,41 +7,50 @@ const user = {
   fullname: "Admin",
 };
 
-class authService {
+class AuthService {
   async login(req, res) {
-    return new Promise((resolve, reject) => {
-      try {
-        const refreshToken = jwt.refresh({ id: user.id });
-        res.cookie("refreshToken", refreshToken, {
-          path: "/",
-          httpOnly: true,
-          secure: true,
-          sameSite: "none",
-          maxAge: 7 * 24 * 60 * 60 * 1000,
-        });
+    try {
+      // Refresh token yaratish va cookie da saqlash
+      const refreshToken = jwt.refresh({ id: user.id });
+      res.cookie("refreshToken", refreshToken, {
+        path: "/",
+        httpOnly: true,
+        // Agar production rejimida bo'lsangiz HTTPS talab etiladi
+        secure: process.env.NODE_ENV === "production",
+        // Agar cookie cross-site bo'lsa "none", aks holda "lax"
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 kun
+      });
 
-        const accessToken = jwt.accsess({ id: user.id });
-        res.cookie("accessToken", accessToken, {
-          path: "/",
-          httpOnly: true,
-          secure: true,
-          sameSite: "none",
-          maxAge: 15 * 60 * 1000,
-        });
+      // Access token yaratish va cookie da saqlash
+      const accessToken = jwt.access({ id: user.id });
+      res.cookie("accessToken", accessToken, {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        maxAge: 15 * 60 * 1000, // 15 daqiqa
+      });
 
-        resolve({
-          status: "success",
-          message: "Success",
-          data: user,
-        });
-      } catch (error) {
-        console.log(error);
-        reject(error);
-      }
-    });
+      return res.json({
+        status: "success",
+        message: "Success",
+        data: user,
+      });
+    } catch (error) {
+      console.error(error);
+      return res
+        .status(500)
+        .json({ status: "error", message: "Internal server error" });
+    }
   }
 
-  logout(req, res) {}
+  logout(req, res) {
+    // Cookie'larni tozalash: agar cookie yo'li "/"
+    res.clearCookie("refreshToken", { path: "/" });
+    res.clearCookie("accessToken", { path: "/" });
+    return res.json({ status: "success", message: "Logged out" });
+  }
 }
 
-module.exports = new authService();
+module.exports = new AuthService();
