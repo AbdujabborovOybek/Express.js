@@ -10,7 +10,13 @@ const helmet = require("helmet");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    credentials: true,
+  })
+);
 const imagesPath = path.join(__dirname, "../public", "images");
 app.use("/user/img/", express.static(imagesPath));
 
