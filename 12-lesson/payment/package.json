@@ -1,0 +1,18 @@
+{
+  "name": "payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "payment.js",
+  "scripts": {
+    "node": "node payment.js",
+    "dev": "nodemon payment.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exprss": "^0.0.1-security"
+  }
+}

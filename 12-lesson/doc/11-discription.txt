@@ -1,0 +1,47 @@
+Assalomu alaykum! 🚀  
+Bugungi darsimizda zamonaviy dasturiy ta'minot arxitekturasi - Microservices va uni Express.js bilan qanday amalga oshirishni o'rganamiz. Ushbu dars orqali siz:
+
+
+🎯 Nimalarni O‘rganasiz?
+- ✅ Microservices arxitekturasi asoslari va afzalliklari  
+- ✅ Express.js yordamida mustaqil microservices yaratish  
+- ✅ API Gateway patterni va microservices orqali ma'lumot almashish  
+
+
+🔍 Dars Davomida Ko'rib Chiqamiz:
+1. Microservicesga kirish  
+   - Monolit va Microservices farqlari  
+   - Qachon Microservices ishlatish kerak?  
+
+2. Express.js da birinchi microservice  
+   - Payment service yaratish (3001-port)  
+
+3. API Gateway bilan birlashtirish  
+   - Bitta kirish nuqtasidan barcha servislarga murojaat  
+   - Gateway routing sozlamalari
+
+
+
+📌 Darsdan Keyin Bilasiz:
+- Microservices loyihalarini tuzish tamoyillari  
+- Express.js da modulli arxitektura qurish  
+- API Gateway orqali xizmatlararo muloqot qilish
+
+
+🏠 Uyga Vazifa:
+1. Order service yaratish (3002-port)  
+2. Uni API Gateway orqali boshqa servislar bilan integratsiya qilish  
+
+
+🔗 Foydali Resurslar:
+- https://microservices.io - Microservices patternlari  
+- https://expressjs.com - Express.js hujjatlari  
+
+
+📌 Foydali Havolalar:  
+- https://microservices.io - Microservices patternlari  
+- https://expressjs.com - Express.js hujjatlari   
+
+
+🎬 Videoni Ko‘ring, Like Bosing va Obuna Bo‘ling! 👍  
+👉 Birgalikda dasturlashni o‘rganamiz! 😊

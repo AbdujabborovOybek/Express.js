@@ -1,0 +1,101 @@
+Dars Rejasi: Microservices va Express.js
+
+Maqsad:
+- Talabalar microservices arxitekturasini tushunishlari
+- Express.js yordamida oddiy microservice yaratishni o'rganish
+- API Gateway va microservices orqali ma'lumot almashishni tushunish
+
+
+Darsning Bosqichlari:
+
+1. Kirish (10 daqiqa)
+- Monolit vs Microservices tushunchalari
+- Microservices afzalliklari va kamchiliklari
+- Real hayotdan misollar (Netflix, Amazon)
+- Dars rejasi haqida qisqacha ma'lumot
+
+2. Microservices Arxitekturasi (15 daqiqa)
+- Microservices nima?
+  - Mustaqil ishlaydigan kichik servislar
+  - Har biri alohida maqsadga xizmat qiladi
+- Asosiy komponentlar:
+  - API Gateway
+  - Service Discovery
+  - Config Server
+  - Message Broker
+- Microservices kommunikatsiyasi:
+  - REST API
+  - Message Queues (RabbitMQ, Kafka)
+  - gRPC
+
+3. Express.js da Microservice Yaratish (20 daqiqa)
+- Oddiy user-service yaratish:
+  ```bash
+  mkdir user-service
+  cd user-service
+  npm init -y
+  npm install express mongoose
+  ```
+- Kod misoli:
+  ```javascript
+  // user-service/index.js
+  const express = require('express');
+  const app = express();
+  
+  app.get('/users', (req, res) => {
+    res.json([{id: 1, name: 'John'}]);
+  });
+  
+  app.listen(3001, () => console.log('User Service running on 3001'));
+  ```
+- Product-service yaratish (alohida loyiha sifatida)
+- Dockerizatsiya qilish (qisqacha)
+  ```dockerfile
+  FROM node:14
+  WORKDIR /app
+  COPY package.json .
+  RUN npm install
+  COPY . .
+  CMD ["node", "index.js"]
+  ```
+
+4. API Gateway bilan Integratsiya (15 daqiqa)
+- API Gateway nima?
+  - Bitta kirish nuqtasi
+  - Routing, authentication, logging
+- Express.js da oddiy API Gateway:
+  ```javascript
+  const express = require('express');
+  const axios = require('axios');
+  const app = express();
+  
+  app.get('/api/users', async (req, res) => {
+    const response = await axios.get('http://user-service:3001/users');
+    res.json(response.data);
+  });
+  
+  app.listen(3000, () => console.log('API Gateway running on 3000'));
+  ```
+- Service Discovery (qisqacha)
+- Load Balancing (qisqacha)
+
+5. Yakuniy Qism (5-10 daqiqa)
+- Takrorlash: Microservices afzalliklari va Express.js da amaliy qo'llash
+- Savol-javob: Talabalar savollari
+- Vazifa:
+  - Order-service yaratish
+  - API Gateway orqali user va order servislarini birlashtirish
+
+
+Qo'shimcha Tavsiyalar:
+1. Kubernetes bilan microservices ni deploy qilish (keyingi darslar uchun)
+2. Postman yordamida API larni test qilish
+
+
+Dars Uchun Foydali Havolalar:
+- [Microservices Patterns](https://microservices.io/)
+- [Express.js Documentation](https://expressjs.com/)
+- [API Gateway Pattern](https://docs.microsoft.com/en-us/azure/architecture/microservices/design/gateway)
+
+
+Ushbu darsda talabalar zamonaviy dasturiy ta'minot arxitekturasini tushunishlari va Express.js yordamida microservices yaratish asoslarini o'rganishlari mumkin.
